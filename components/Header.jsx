@@ -14,7 +14,12 @@ const windowWidth = Dimensions.get('window').width;
 // {60=== windowWidth/6.5}
 
 
-const Header = ({displayName}) => {
+
+
+
+const Header = ({displayName, navigation}) => {
+
+
   return (
 
 
@@ -29,7 +34,7 @@ const Header = ({displayName}) => {
 
           <View style={styles.leftHeader1}>
 
-            <TouchableOpacity style={{paddingLeft:15, paddingBottom:5}}>
+            <TouchableOpacity style={{paddingLeft:15, paddingBottom:5}} onPress={()=>  navigation.toggleDrawer()}>
 
             <Feather name="menu" size={24} color="white" />
 
@@ -59,9 +64,9 @@ const Header = ({displayName}) => {
 
              <Text style={styles.headerText}>{displayName}</Text>
 
-             <TouchableOpacity style={{position:"absolute", right:20, top:25}} >
+             <TouchableOpacity style={{position:"absolute", right:20, top:25}}  >
 
-             <SimpleLineIcons name="options-vertical" size={17} color="white" />
+             <SimpleLineIcons name="options-vertical" size={17} color="white"  />
 
              </TouchableOpacity>
 
@@ -74,9 +79,7 @@ const Header = ({displayName}) => {
       </View>
 
 
-      <View style={styles.bottom}>
-        <Text style={styles.bottomText}>Powered By APEPDCL</Text>
-      </View>
+    
 
     </View>
 
@@ -87,29 +90,11 @@ export default Header;
 
 const styles = StyleSheet.create({
 
-  bottom: {
-    width: "100%",
-    height: windowHeight / 22,
-    backgroundColor: "#2087c1",
-    position: 'absolute',
-    bottom: 0,
-    alignItems: "center",
-    justifyContent: "center"
-
-  },
-
-  bottomText: {
-    color: "white",
-    fontWeight: "700"
-
-  },
-
   container: {
 
     marginTop: Constants.statusBarHeight,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start'
+    display:'flex'
+    
   },
 
   header: {
@@ -153,7 +138,7 @@ const styles = StyleSheet.create({
 
     width: "100%",
     height: "50%",
-    backgroundColor: "white",
+    backgroundColor:"white",
     borderTopLeftRadius: 100
   },
 
