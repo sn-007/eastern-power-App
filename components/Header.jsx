@@ -36,7 +36,7 @@ const Header = ({displayName, navigation}) => {
 
             <TouchableOpacity style={{paddingLeft:15, paddingBottom:5}} onPress={()=>  navigation.toggleDrawer()}>
 
-            <Feather name="menu" size={24} color="white" />
+            <Feather name="menu" size={30} color="white" />
 
             </TouchableOpacity>
 
