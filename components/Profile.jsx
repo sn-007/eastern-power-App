@@ -1,17 +1,18 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { Feather } from '@expo/vector-icons';
+import colors from '../colors';
 
 const Profile = () => {
   return (
-    <View style={styles.container}>
+    <View elevation={2} style={styles.container}>
       <View style={styles.wrapper}>
 
         <Image style={styles.profileLogo} source={require('../assets/profileLogo.png')} />
 
         <View style={styles.wrapperText}>
-          <Text style={{fontWeight:'bold', fontSize:20, color:'#6b6a6b'}}>@snpro</Text>
-          <Text style={{fontSize:10, color:'#6b6a6b'}}>swamymagnet@gmail.com</Text>
+          <Text style={{fontWeight:'bold', fontSize:20, color:colors.sidebarText}}>@snpro</Text>
+          <Text style={{fontSize:10, color:colors.sidebarText}}>swamymagnet@gmail.com</Text>
         </View>
 
         <View style={{position:'absolute', right:20}}>
@@ -34,9 +35,18 @@ export default Profile
 
 const styles = StyleSheet.create({
   container: {
+
     height: 75,
-    margin:10
-  },
+    margin:10,
+    // borderWidth:0.5,
+    // borderColor:'white',
+    // shadowColor: "#000000",
+    // shadowOpacity: 0.2,
+    // shadowRadius: 1,
+    // shadowOffset: { height: 0, width: 0}
+  
+
+   },
 
   wrapper: {
     width: '100%',

@@ -14,7 +14,7 @@ const windowWidth = Dimensions.get('window').width;
 // {60=== windowWidth/6.5}
 
 
-
+import colors from '../colors';
 
 
 const Header = ({displayName, navigation}) => {
@@ -26,7 +26,7 @@ const Header = ({displayName, navigation}) => {
 
     <View style={styles.container}>
 
-      <StatusBar style="light" backgroundColor="#2087c1" />
+      <StatusBar style="light" backgroundColor={colors.statusbar} />
 
       <View style={styles.header}>
 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
 
     width: "25%",
     height: "100%",
-    backgroundColor: "#69d5f5",
+    backgroundColor: colors.header,
     display: "flex",
     flexDirection: "column"
   },
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
 
     width: "100%",
     height: "50%",
-    backgroundColor: "#69d5f5",
+    backgroundColor: colors.header,
     justifyContent:'center',
     alignItems:"flex-start"
   },
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   rightHeader: {
     display: "flex",
     flexDirection: 'row',
-    backgroundColor: "#69d5f5",
+    backgroundColor: colors.header,
     borderBottomEndRadius: 70,
     width: "100%",
     height: "50%",
