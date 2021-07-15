@@ -10,6 +10,8 @@ var router = express.Router();
 
 
 const loginFunction = async (req, res) =>  {
+
+    console.log("/user/login")
     
     const user = await User.findOne({
         email: req.body.email

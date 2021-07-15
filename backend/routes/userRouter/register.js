@@ -9,6 +9,8 @@ var router = express.Router();
 
 const registerFunction = async (req, res) => {
 
+    console.log("/user/register")
+
     let verification=""
     try {
         verification = await User.findOne({ email: req.body.email });
